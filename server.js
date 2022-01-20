@@ -11,6 +11,8 @@ app.use(express.urlencoded({ extended: true })); //converts to key/value pairing
 // parse incoming JSON data
 app.use(express.json());
 
+app.use(express.static('public'));
+
 function filterByQuery(query, animalsArray) {
   let personalityTraitsArray = [];
   let filteredResults = animalsArray;
@@ -90,10 +92,6 @@ app.post("/api/animals", (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`API server now on port ${PORT}!`);
-});
-
 function validateAnimal(animal) {
   if (!animal.name || typeof animal.name !== "string") {
     return false;
@@ -109,3 +107,11 @@ function validateAnimal(animal) {
   }
   return true;
 }
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`API server now on port ${PORT}!`);
+});
