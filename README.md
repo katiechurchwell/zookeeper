@@ -3,12 +3,4 @@
   [![project-top-language](https://img.shields.io/github/languages/top/katiechurchwell/zookeepr?color=blueviolet)](https://github.com/katiechurchwell/zookeepr)
 
 ## Description
-
-
-## Demo
-
-
-## Installation
-
-
-## Usage
+An application that allows for the entering, tracking and modifying of zoo animals and zookeepers. Built to learn about web servers.
