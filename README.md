@@ -4,3 +4,6 @@
 
 ## Description
 An application that allows for the entering, tracking and modifying of zoo animals and zookeepers. Built to learn about web servers.
+
+## Demo/Screenshot
+!["Screenshot of Zookeepr"](./readme-screenshot.png)
